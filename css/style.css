@@ -1,0 +1,24 @@
+
+.completada{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+#lista-tareas{
+    background-color: lightgray;
+}
+input{
+    width: 350px;
+}
+button{
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 5px;
+    width: 100px;
+    background-color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+}
