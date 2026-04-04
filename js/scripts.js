@@ -24,24 +24,25 @@ function añadirTarea(tarea={texto:inputTarea.value, completada:false}){
             console.log('ANTES del toggle:', li.classList.contains('completada'));
             li.classList.toggle('completada');
             console.log('Despues del toggle:', li.classList.contains('completada'));
+            guardarEnStorage();
                        
         });
-        guardarEnStorage();
+            guardarEnStorage();
         }
         };
         //al final guarda en storage
         function guardarEnStorage(){
-        const tareas = Array.from(listaTareas.querySelectorAll('li')).map(elemento =>{
-            console.log('clase del elemento:', elemento.className);
-            return{texto: elemento.childNodes[0].textContent,
+        const tareas = Array.from(listaTareas.querySelectorAll('li')).map(elemento =>({
+           
+            texto: elemento.childNodes[0].textContent,
                 completada: elemento.classList.contains('completada')
-        };
+        }));
         console.log('guardando:', tareas);
-    });
         localStorage.setItem('tareas', JSON.stringify(tareas) );
+    };
        
     
-}
+
 
 
 
