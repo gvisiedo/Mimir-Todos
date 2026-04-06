@@ -1,4 +1,6 @@
-
+body{
+    margin:250px;
+}
 .completada{
     text-decoration: line-through;
     opacity: 0.5;
